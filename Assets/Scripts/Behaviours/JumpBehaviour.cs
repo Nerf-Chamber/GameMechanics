@@ -13,9 +13,5 @@ public class JumpBehaviour : MonoBehaviour
     private void Awake() => _rb = GetComponent<Rigidbody2D>();
 
     public void Jump() => _rb.AddForceY(jumpForce);
-    public bool IsGrounded(Vector2 origin) 
-    {
-        Debug.DrawRay(origin, Vector2.down, Color.red);
-        return Physics2D.Raycast(origin, Vector2.down, raycastDistance, collisionLayer); 
-    }
+    public bool IsGrounded(Vector2 origin) { return Physics2D.Raycast(origin, Vector2.down, raycastDistance, collisionLayer); }
 }

@@ -55,7 +55,7 @@ public class Player : Character, InputSystem_Actions.IPlayerActions
                 if (_jump.IsGrounded(transform.position))
                 {
                     if (direction == 0) { playerState = PlayerState.Idle; }
-                    else { playerState = isPreparedForRun ? PlayerState.Run : PlayerState.Walk; }
+                    else { playerState = isPreparedForRun ? PlayerState.Run : PlayerState.Walk;}
                 }
                 break;
         }
