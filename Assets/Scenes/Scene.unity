@@ -310,9 +310,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 839339699}
+  - component: {fileID: 839339702}
   - component: {fileID: 839339698}
   - component: {fileID: 839339697}
   - component: {fileID: 839339696}
+  - component: {fileID: 839339701}
+  - component: {fileID: 839339700}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -468,6 +471,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &839339700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839339695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a7d5bb3821d68e47bc8377dcb1b319d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JumpBehaviour
+  jumpForce: 500
+  raycastDistance: 0.75
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &839339701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839339695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e51a7905146fd4c8ec00bc5928aaab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveBehaviour
+--- !u!114 &839339702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839339695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a736a04b8f8b5b4409786ef961a24274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  _move: {fileID: 0}
+  _jump: {fileID: 0}
+  walkSpeed: 3
+  runSpeed: 5
 --- !u!1 &1263060229
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +530,7 @@ GameObject:
   - component: {fileID: 1263060235}
   - component: {fileID: 1263060234}
   - component: {fileID: 1263060233}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
